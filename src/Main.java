@@ -27,6 +27,15 @@ public class Main {
         int num2 = scanner.nextInt();
         return num1 * num2;
     }
+    public static int div(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter two numbers for the division:");
+        System.out.println("Enter the Dividend number :");
+        int num1 = scanner.nextInt();
+        System.out.println("Enter the Divisor number:");
+        int num2 = scanner.nextInt();
+        return num1/num2;
+    }
 
         public static void main (String[]args){
             Scanner scanner = new Scanner(System.in);
@@ -57,6 +66,11 @@ public class Main {
                 case 3:
                     int MultResult = mult();
                     System.out.println("The multiplication result is:" + MultResult);
+                    break;
+                case 4:
+                    int DivResult = div();
+                    System.out.println("The division result is :" +DivResult);
+                    break;
                 default:
                     System.out.println("Choose a number between 1-8");
             }
