@@ -18,6 +18,15 @@ public class Main {
         int num2 = scanner.nextInt();
         return num1 - num2;
     }
+    public static int mult(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter two numbers for multiplication");
+        System.out.println("Enter the first number:");
+        int num1 = scanner.nextInt();
+        System.out.println("Enter the second number:");
+        int num2 = scanner.nextInt();
+        return num1 * num2;
+    }
 
         public static void main (String[]args){
             Scanner scanner = new Scanner(System.in);
@@ -34,20 +43,20 @@ public class Main {
 
 
             int choice = scanner.nextInt();
-            int result = 0;
 
 
             switch (choice) {
                 case 1:
-                    result = add();
-                    System.out.println("The sum is :" + result);
+                    int SumResult = add();
+                    System.out.println("The sum is :" + SumResult);
                     break;
                 case 2:
-                    result = sub();
-                    System.out.println("The subtraction is :" + result);
+                    int SubtResult = sub();
+                    System.out.println("The subtraction is :" + SubtResult);
                     break;
                 case 3:
-                    System.out.println("good bye");
+                    int MultResult = mult();
+                    System.out.println("The multiplication result is:" + MultResult);
                 default:
                     System.out.println("Choose a number between 1-8");
             }
