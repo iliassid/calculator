@@ -1,45 +1,62 @@
 import java.util.Scanner;
 
 public class Main {
-    public static int add(){
+    public static double add(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the first number:");
-        int num1 = scanner.nextInt();
+        double num1 = scanner.nextInt();
         System.out.println("Enter the second number:");
-        int num2 = scanner.nextInt();
+        double num2 = scanner.nextInt();
         return num1 + num2;
     }
-    public static int sub() {
+    public static double sub() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter 2 numbers for subtraction");
         System.out.println("Enter the first number:");
-        int num1 = scanner.nextInt();
+        double num1 = scanner.nextInt();
         System.out.println("Enter the second number:");
-        int num2 = scanner.nextInt();
+        double num2 = scanner.nextInt();
         return num1 - num2;
     }
-    public static int mult(){
+    public static double mult(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter two numbers for multiplication");
         System.out.println("Enter the first number:");
-        int num1 = scanner.nextInt();
+        double num1 = scanner.nextInt();
         System.out.println("Enter the second number:");
-        int num2 = scanner.nextInt();
+        double num2 = scanner.nextInt();
         return num1 * num2;
     }
-    public static int div(){
+    public static double div(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter two numbers for the division:");
         System.out.println("Enter the Dividend number :");
-        int num1 = scanner.nextInt();
+        double num1 = scanner.nextInt();
         System.out.println("Enter the Divisor number:");
-        int num2 = scanner.nextInt();
+        double num2 = scanner.nextInt();
         return num1/num2;
     }
+    public static double power(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Let's calculate number 1 to the power of number 2");
+        System.out.println("Enter number 1:");
+        double num1 = scanner.nextDouble();
+        System.out.println("Enter the second number:");
+        double num2 = scanner.nextDouble();
+        return Math.pow(num1, num2);
+    }
+    public static double[] SqRoot(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number to calculate Square root for it:");
+        double num1 = scanner.nextDouble();
+        double result = Math.sqrt(num1);
+        return new double[]{num1,result};
+    }
+
+
 
         public static void main (String[]args){
             Scanner scanner = new Scanner(System.in);
-
             System.out.println("Choose your option:");
             System.out.println("1.Addition (+)");
             System.out.println("2.Subtraction (-)");
@@ -56,20 +73,28 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    int SumResult = add();
+                    double SumResult = add();
                     System.out.println("The sum is :" + SumResult);
                     break;
                 case 2:
-                    int SubtResult = sub();
+                    double SubtResult = sub();
                     System.out.println("The subtraction is :" + SubtResult);
                     break;
                 case 3:
-                    int MultResult = mult();
+                    double MultResult = mult();
                     System.out.println("The multiplication result is:" + MultResult);
                     break;
                 case 4:
-                    int DivResult = div();
+                    double DivResult = div();
                     System.out.println("The division result is :" +DivResult);
+                    break;
+                case 5:
+                    double PowResult = power();
+                    System.out.println("The power of number 1 to the number is:"+PowResult);
+                    break;
+                case 6:
+                    double SRResult[] = SqRoot();
+                    System.out.println("The Square root of the number "+SRResult[0]+" is: "+SRResult[1]);
                     break;
                 default:
                     System.out.println("Choose a number between 1-8");
